@@ -1,1 +1,110 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .articles ul, .conferences-grid {
+            list-style-type: none;
+            padding: 0;
+        }
+        .articles ul li, .conferences-grid iframe {
+            margin-bottom: 10px;
+        }
+        .conferences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm [Your Name], a passionate [Your Profession] with a keen interest in [Your Interests]. 
+                I love sharing my knowledge through articles and speaking at conferences. 
+                Feel free to explore my work below!
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                You can reach out to me on <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>.
+            </p>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles">
+            <h2>Articles</h2>
+            <ul>
+                <li><a href="https://example.com/article1" target="_blank">Article 1: Title of the Article</a></li>
+                <li><a href="https://example.com/article2" target="_blank">Article 2: Title of the Article</a></li>
+                <li><a href="https://example.com/article3" target="_blank">Article 3: Title of the Article</a></li>
+                <!-- Add more articles as needed -->
+            </ul>
+        </section>
+
+        <!-- Conferences Section -->
+        <section class="conferences">
+            <h2>Conferences</h2>
+            <div class="conferences-grid">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/video1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/video3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- Add more YouTube videos as needed -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
