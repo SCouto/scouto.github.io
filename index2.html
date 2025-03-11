@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .profile-picture {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%; /* Makes the image circular */
+            border: 3px solid #fff; /* Adds a white border around the image */
+            margin-bottom: 5px; /* Adds space below the image */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .articles ul, .conferences-grid {
+            list-style-type: none;
+            padding: 0;
+        }
+        .articles ul li, .conferences-grid iframe {
+            margin-bottom: 10px;
+        }
+        .conferences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Language Switcher Styles */
+        .language-switcher {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        .language-switcher img {
+            width: 30px; /* Adjust flag size */
+            height: 20px;
+            margin: 0 5px; /* Space between flags */
+            cursor: pointer;
+            border: 1px solid #ccc; /* Optional border */
+            border-radius: 3px; /* Optional rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <a href="#" data-lang="en"><img src="images/flags/uk.png" alt="English"></a>
+        <a href="#" data-lang="gl"><img src="images/flags/gz.png" alt="Galego"></a>
+    </div>
+
+    <header>
+        <img src="my-profile-picture.jpg" alt="Sergio" class="profile-picture">
+    </header>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about-me">
+            <h2 id="about-me-title"></h2>
+            <p id="about-me-text"></p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 id="contact-title"></h2>
+            <p id="contact-text"></p>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles">
+            <h2 id="articles-title"></h2>
+            <ul id="articles-list">
+                <li><a href="https://example.com/article1" target="_blank">Article 1: Title of the Article</a></li>
+                <li><a href="https://example.com/article2" target="_blank">Article 2: Title of the Article</a></li>
+                <li><a href="https://example.com/article3" target="_blank">Article 3: Title of the Article</a></li>
+                <!-- Add more articles as needed -->
+            </ul>
+        </section>
+
+        <!-- Conferences Section -->
+        <section class="conferences">
+            <h2 id="conferences-title"></h2>
+            <div class="conferences-grid">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/video1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/video3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- Add more YouTube videos as needed -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <footer-text id="footer-text"></footer-text>
+    </footer>
+
+    <script>
+        // Translations for different languages
+        const translations = {
+            en: {
+                aboutMeTitle: "About Me",
+                aboutMeText: "Hi, I'm Sergio, a passionate Data Engineer with a keen interest in Data and their insights. Feel free to explore my work below!",
+                contactTitle: "Contact",
+                contactText: 'You can reach out to me on <a href="https://www.linkedin.com/in/sergiocoutocatoira/" target="_blank">LinkedIn</a>.',
+                articlesTitle: "Articles",
+                conferencesTitle: "Conferences",
+                footerText: "2025 Sergio Catoira"
+            },
+            es: {
+                aboutMeTitle: "Sobre Mí",
+                aboutMeText: "Hola, soy Sergio, un ingeniero de datos apasionado con un gran interés en los datos y en las historias que cuentan. ¡No dudes en explorar mi trabajo a continuación!",
+                contactTitle: "Contacto",
+                contactText: 'Puedes contactarme en <a href="https://www.linkedin.com/in/sergiocoutocatoira/" target="_blank">LinkedIn</a>.',
+                articlesTitle: "Artículos",
+                conferencesTitle: "Charlas",
+                footerText: "2025 Sergio Catoira"
+            },
+            gl: {
+                aboutMeTitle: "Sobre min",
+                aboutMeText: "Ola, son Sergio, un enxeñeiro de datos con grande interese nos datos e nas historias que contan. Non dubides en explorar o meu traballo a continuación!",
+                contactTitle: "Contacto",
+                contactText: 'Podes contactar comigo en <a href="https://www.linkedin.com/in/sergiocoutocatoira/" target="_blank">LinkedIn</a>.',
+                articlesTitle: "Artigos",
+                conferencesTitle: "Charlas nas que participei",
+                footerText: "2025 Sergio Catoira"
+            }
+        };
+
+        // Function to change the language
+        function changeLanguage(lang) {
+            document.getElementById("about-me-title").textContent = translations[lang].aboutMeTitle;
+            document.getElementById("about-me-text").textContent = translations[lang].aboutMeText;
+            document.getElementById("contact-title").textContent = translations[lang].contactTitle;
+            document.getElementById("contact-text").innerHTML = translations[lang].contactText;
+            document.getElementById("articles-title").textContent = translations[lang].articlesTitle;
+            document.getElementById("conferences-title").textContent = translations[lang].conferencesTitle;
+            document.getElementById("footer-text").innerHTML = translations[lang].footerText;
+
+            // Save the selected language
+            localStorage.setItem("preferredLanguage", lang);
+        }
+
+        // Load the saved language on page load
+        document.addEventListener("DOMContentLoaded", function () {
+            const savedLang = localStorage.getItem("preferredLanguage") || "en"; // Default to English
+            changeLanguage(savedLang);
+
+            // Add event listeners to the flags
+            const flags = document.querySelectorAll(".language-switcher a");
+            flags.forEach(flag => {
+                flag.addEventListener("click", function (e) {
+                    e.preventDefault(); // Prevent the link from navigating
+                    const lang = this.getAttribute("data-lang");
+                    changeLanguage(lang);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
