@@ -47,15 +47,21 @@
         .articles ul li, .conferences-grid iframe {
             margin-bottom: 10px;
         }
-        .conferences-grid {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px; /* Space between items */
+      .conferences-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+            grid-template-rows: repeat(2, auto); /* Creates 2 rows */
+            gap: 20px; /* Adds space between items */
+            justify-items: center; /* Centers the content within grid items */
         }
         .conference-item {
-            width: 80%; /* Adjust width as needed */
+            width: 100%; /* Makes sure the item takes up the full width of its container */
+            max-width: 560px; /* Maximum width for each iframe */
             text-align: center;
+        }
+        .conference-item iframe {
+            width: 100%; /* Makes the iframe take up the full width of the container */
+            height: 315px; /* Fixed height for maintaining a 16:9 aspect ratio */
         }
         .conference-item h3 {
             margin-bottom: 10px;
@@ -82,6 +88,11 @@
             cursor: pointer;
             border: 1px solid #ccc; /* Optional border */
             border-radius: 3px; /* Optional rounded corners */
+        }
+        @media (max-width: 768px) {
+            .conferences-grid {
+                grid-template-columns: 1fr; /* Single column */
+            }
         }
     </style>
 </head>
@@ -128,11 +139,11 @@
             <div class="conferences-grid">
                 <div class="conference-item">
                     <h3 id="conferences-dama"></h3>
-                    <iframe width="50%" height="300" src="https://www.youtube.com/embed/JOKL5dkVli0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/JOKL5dkVli0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="conference-item">
                     <h3 id="conferences-codely"></h3>
-                    <iframe width="50%" height="300" src="https://www.youtube.com/embed/hd2yh_Tbrno" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/hd2yh_Tbrno" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
