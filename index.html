@@ -48,9 +48,18 @@
             margin-bottom: 10px;
         }
         .conferences-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Space between items */
+        }
+        .conference-item {
+            width: 80%; /* Adjust width as needed */
+            text-align: center;
+        }
+        .conference-item h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
         }
         footer {
             background-color: #333;
@@ -59,7 +68,6 @@
             padding: 10px 0;
             margin-top: 20px;
         }
-
         /* Language Switcher Styles */
         .language-switcher {
             position: fixed;
@@ -119,15 +127,16 @@
             <h2 id="conferences-title"></h2>
             <div class="conferences-grid">
                 <div class="conference-item">
-                    <h3 id="conferences-dama"></h3>  <!-- Title will be set dynamically -->
-                    <iframe width="80%" height="300" src="https://www.youtube.com/embed/hd2yh_Tbrno" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3 id="conferences-dama"></h3>
+                    <iframe width="50%" height="300" src="https://www.youtube.com/embed/JOKL5dkVli0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="conference-item">
-                    <h3 id="conferences-codely"></h3>  <!-- Title will be set dynamically -->
-                    <iframe width="80%" height="300" src="https://www.youtube.com/embed/JOKL5dkVli0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3 id="conferences-codely"></h3>
+                    <iframe width="50%" height="300" src="https://www.youtube.com/embed/hd2yh_Tbrno" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
+
     </div>
 
     <footer>
@@ -146,7 +155,7 @@
                 conferencesTitle: "Conferences",
                 conferenceDama: "December 2023 - Moving from Local Scripts to Data Products - From minute 53",
                 conferenceCodely: "January 2025 - Building a Self Serving Dataplatform",
-                footerText: "2025 Sergio Catoira"
+                footerText: "2025 Sergio Couto Catoira"
             },
             es: {
                 aboutMeTitle: "Sobre Mí",
@@ -157,7 +166,7 @@
                 conferencesTitle: "Charlas",
                 conferenceDama: "December 2023 - Moving from Local Scripts to Data Products - From minute 53",
                 conferenceCodely: "January 2025 - Building a Self Serving Dataplatform",
-                footerText: "2025 Sergio Catoira"
+                footerText: "2025 Sergio Couto Catoira"
             },
             gl: {
                 aboutMeTitle: "Sobre min",
@@ -168,7 +177,7 @@
                 conferencesTitle: "Charlas nas que participei",
                 conferenceDama: "Decembro 2023 - Moving from Local Scripts to Data Products - A partires do minuto 53",
                 conferenceCodely: "Xaneiro 2025 - Building a Self Serving Dataplatform",
-                footerText: "2025 Sergio Catoira"
+                footerText: "2025 Sergio Couto Catoira"
             }
         };
 
