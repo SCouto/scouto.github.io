@@ -4,100 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .profile-picture {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%; /* Makes the image circular */
-            border: 3px solid #fff; /* Adds a white border around the image */
-            margin-bottom: 5px; /* Adds space below the image */
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        a {
-            color: #0077b5;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .articles ul, .conferences-grid {
-            list-style-type: none;
-            padding: 0;
-        }
-        .articles ul li, .conferences-grid iframe {
-            margin-bottom: 10px;
-        }
-      .conferences-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
-            grid-template-rows: repeat(2, auto); /* Creates 2 rows */
-            gap: 20px; /* Adds space between items */
-            justify-items: center; /* Centers the content within grid items */
-        }
-        .conference-item {
-            width: 100%; /* Makes sure the item takes up the full width of its container */
-            max-width: 560px; /* Maximum width for each iframe */
-            text-align: center;
-        }
-        .conference-item iframe {
-            width: 100%; /* Makes the iframe take up the full width of the container */
-            height: 315px; /* Fixed height for maintaining a 16:9 aspect ratio */
-        }
-        .conference-item h3 {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        /* Language Switcher Styles */
-        .language-switcher {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-        }
-        .language-switcher img {
-            width: 30px; /* Adjust flag size */
-            height: 20px;
-            margin: 0 5px; /* Space between flags */
-            cursor: pointer;
-            border: 1px solid #ccc; /* Optional border */
-            border-radius: 3px; /* Optional rounded corners */
-        }
-        @media (max-width: 768px) {
-            .conferences-grid {
-                grid-template-columns: 1fr; /* Single column */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
     <!-- Language Switcher -->
     <div class="language-switcher">
         <a href="#" data-lang="en"><img src="images/flags/uk.png" alt="English"></a>
@@ -132,6 +41,15 @@
             </ul>
         </section>
 
+        <!-- Teaching Section -->
+        <section class="teaching">
+            <h2 id="teaching-title"></h2>
+            <ul id="teaching-list">
+                <li><a href="https://www.eoi.es/es/cursos/89273/master-en-inteligencia-artificial-y-ciencia-de-datos-online" target="_blank" id="course-1">Master IA & Ciencia de Datos (Online)</a></li>
+                <li><a href="https://www.eoi.es/es/cursos/89564/master-en-ingenieria-de-datos-online" target="_blank" id="course-2">Master Ingeniería de Datos (Online)</a></li>
+            </ul>
+        </section>
+
 
         <!-- Conferences Section -->
         <section class="conferences">
@@ -149,80 +67,6 @@
         </section>
 
     </div>
-
-    <footer>
-        <footer-text id="footer-text"></footer-text>
-    </footer>
-
-    <script>
-        // Translations for different languages
-        const translations = {
-            en: {
-                aboutMeTitle: "About Me",
-                aboutMeText: "Hi, I'm Sergio, I work as a Data Engineer while also teaching BigData and AI. Feel free to explore my work below and contact me to share experiences!",
-                contactTitle: "Contact",
-                contactText: 'You can reach out to me on <a href="https://www.linkedin.com/in/sergiocoutocatoira/" target="_blank">LinkedIn</a>.',
-                articlesTitle: "Articles",
-                conferencesTitle: "Conferences",
-                conferenceDama: "December 2023 - Moving from Local Scripts to Data Products - From minute 53",
-                conferenceCodely: "January 2025 - Building a Self Serving Dataplatform - Talk at Codely TV",
-                footerText: "2025 Sergio Couto Catoira"
-            },
-            es: {
-                aboutMeTitle: "Sobre Mí",
-                aboutMeText: "Hola, soy Sergio, un ingeniero de datos apasionado con un gran interés en los datos y en las historias que cuentan. ¡No dudes en explorar mi trabajo a continuación!",
-                contactTitle: "Contacto",
-                contactText: 'Puedes contactarme en <a href="https://www.linkedin.com/in/sergiocoutocatoira/" target="_blank">LinkedIn</a>.',
-                articlesTitle: "Artículos",
-                conferencesTitle: "Charlas",
-                conferenceDama: "December 2023 - Moving from Local Scripts to Data Products - From minute 53",
-                conferenceCodely: "January 2025 - Building a Self Serving Dataplatform - Talk at Codely TV",
-                footerText: "2025 Sergio Couto Catoira"
-            },
-            gl: {
-                aboutMeTitle: "Sobre min",
-                aboutMeText: "Ola, son Sergio, traballo como Enxeñeiro de Datos e como profesor de BigData & IA. Non dubides en explorar o meu traballo e contactar comigo para intercambiar coñecementos!",
-                contactTitle: "Contacto",
-                contactText: 'Podes contactar comigo en <a href="https://www.linkedin.com/in/sergiocoutocatoira/" target="_blank">LinkedIn</a>.',
-                articlesTitle: "Artigos",
-                conferencesTitle: "Charlas nas que participei",
-                conferenceDama: "Decembro 2023 - Moving from Local Scripts to Data Products - A partires do minuto 53",
-                conferenceCodely: "Xaneiro 2025 - Building a Self Serving Dataplatform - Charla en Codely TV",
-                footerText: "2025 Sergio Couto Catoira"
-            }
-        };
-
-        // Function to change the language
-        function changeLanguage(lang) {
-            document.getElementById("about-me-title").textContent = translations[lang].aboutMeTitle;
-            document.getElementById("about-me-text").textContent = translations[lang].aboutMeText;
-            document.getElementById("contact-title").textContent = translations[lang].contactTitle;
-            document.getElementById("contact-text").innerHTML = translations[lang].contactText;
-            document.getElementById("articles-title").textContent = translations[lang].articlesTitle;
-            document.getElementById("conferences-title").textContent = translations[lang].conferencesTitle;
-            document.getElementById("conferences-dama").textContent = translations[lang].conferenceDama;
-            document.getElementById("conferences-codely").textContent = translations[lang].conferenceCodely;
-            document.getElementById("footer-text").innerHTML = translations[lang].footerText;
-
-            // Save the selected language
-            localStorage.setItem("preferredLanguage", lang);
-        }
-
-        // Load the saved language on page load
-        document.addEventListener("DOMContentLoaded", function () {
-            const savedLang = localStorage.getItem("preferredLanguage") || "en"; // Default to English
-            changeLanguage(savedLang);
-
-            // Add event listeners to the flags
-            const flags = document.querySelectorAll(".language-switcher a");
-            flags.forEach(flag => {
-                flag.addEventListener("click", function (e) {
-                    e.preventDefault(); // Prevent the link from navigating
-                    const lang = this.getAttribute("data-lang");
-                    changeLanguage(lang);
-                });
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
