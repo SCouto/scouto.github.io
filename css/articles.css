@@ -45,7 +45,7 @@ body {
     color: white;
 }
 
-/* Language Switcher Styling */
+/* Language Switcher */
 .language-switcher {
     position: fixed;
     top: 10px;
@@ -54,20 +54,17 @@ body {
 }
 
 .language-switcher img {
-    width: 30px; /* Adjust flag size */
+    width: 30px;
     height: 20px;
-    margin: 0 5px; /* Space between flags */
+    margin: 0 5px;
     cursor: pointer;
-    border: 1px solid #ccc; /* Optional border */
-    border-radius: 3px; /* Optional rounded corners */
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
-/* Layout */
+/* Articles Section */
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 900px;
+    max-width: 800px;
     margin: 100px auto;
     padding: 40px;
     background-color: white;
@@ -76,40 +73,53 @@ body {
     text-align: left;
 }
 
-/* Profile Picture */
-.profile-picture {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    margin-right: 50px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Text Styling */
-.bio {
-    max-width: 500px;
-}
-
 h1 {
-    font-size: 40px;
-    margin-bottom: 15px;
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 20px;
-    color: #555;
-    line-height: 1.6;
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    font-size: 16px;
+    color: #666;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0077b5;
+    margin-top: 5px;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+.coauthor {
+    font-size: 16px;
+    color: #444;
+    margin-top: 5px;
+    font-style: italic;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
         text-align: center;
-    }
-
-    .profile-picture {
-        margin-bottom: 20px;
-        margin-right: 0;
     }
 }

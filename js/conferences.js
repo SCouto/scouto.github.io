@@ -1,35 +1,28 @@
 // Translations for different languages
 const translations = {
     en: {
-        aboutMeTitle: "About Me",
-        aboutMeText: "Hello! I’m Sergio, a professional passionate about data, technology, and sharing knowledge. Explore my work through the menus above!",
         homeTitle: "Home",
         articlesTitle: "Articles",
         conferencesTitle: "Talks",
         teachingTitle: "Places where I teach",
-        contactTitle: "Contact",
-
+        contactTitle: "Contact"
     },
     gl: {
-        aboutMeTitle: "Sobre min",
-        aboutMeText: "Ola son Sergio, un profesional dos datos, a tecnoloxía e a compartición de coñecemento. Explora o meu traballo a través dos menús de arriba!",
         homeTitle: "Portada",
         articlesTitle: "Artigos",
         conferencesTitle: "Charlas",
         teachingTitle: "Cursos onde dou clase",
-        contactTitle: "Contacto",
+        contactTitle: "Contacto"
     }
 };
 
 // Function to change the language
 function changeLanguage(lang) {
-    document.getElementById("about-me-title").textContent = translations[lang].aboutMeTitle;
-    document.getElementById("about-me-text").textContent = translations[lang].aboutMeText;
-    document.getElementById("home-tittle").textContent = translations[lang].homeTitle;
-    document.getElementById("articles-tittle").textContent = translations[lang].articlesTitle;
-    document.getElementById("conferences-tittle").textContent = translations[lang].conferencesTitle;
-    document.getElementById("teaching-tittle").textContent = translations[lang].teachingTitle;
-    document.getElementById("contact-tittle").textContent = translations[lang].contactTitle;
+    document.getElementById("home-title").textContent = translations[lang].homeTitle;
+    document.getElementById("articles-title").textContent = translations[lang].articlesTitle;
+    document.getElementById("conferences-title").textContent = translations[lang].conferencesTitle;
+    document.getElementById("teaching-title").textContent = translations[lang].teachingTitle;
+    document.getElementById("contact-title").textContent = translations[lang].contactTitle;
 
     // Save the selected language in localStorage
     localStorage.setItem("preferredLanguage", lang);
