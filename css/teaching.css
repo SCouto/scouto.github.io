@@ -113,9 +113,9 @@ body {
     flex-direction: column;
 }
 
-
 .subject {
     color: #555;
+    display: flex;
     font-style: italic;
     text-align: right;
     white-space: nowrap; /* Prevents wrapping */
