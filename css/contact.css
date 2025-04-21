@@ -109,9 +109,12 @@ a:hover {
 }
 
 
-/* Responsive Design */
+/* Responsive Design in small screens*/
 @media (max-width: 768px) {
     .container {
         text-align: center;
+    }
+    .menu-toggle {
+        display: none;
     }
 }
