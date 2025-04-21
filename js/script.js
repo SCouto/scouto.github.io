@@ -53,12 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Responsiveness in mobile
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".top-menu ul");
-
-    menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("show");
-    });
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.top-menu ul').classList.toggle('show');
 });
+;
 
