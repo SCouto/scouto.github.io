@@ -102,6 +102,10 @@ p {
     line-height: 1.6;
 }
 
+.menu-toggle {
+    display:none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -146,13 +150,3 @@ p {
         padding: 10px;
     }
 }
-/* Responsive Design in small screens*/
-@media (max-width: 768px) {
-    .container {
-        text-align: center;
-    }
-    .menu-toggle {
-        display: none;
-    }
-}
-
