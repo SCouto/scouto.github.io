@@ -5,14 +5,22 @@ const translations = {
         articlesTitle: "Articles",
         conferencesTitle: "Talks",
         teachingTitle: "Places where I teach",
-        contactTitle: "Contact"
+        contactTitle: "Contact",
+        conferencesPodcast: "Podcast Episode",
+        conferencesGable: "Gable Conference",
+        conferencesCodely: "Codely Conference",
+        conferencesDama: "DAMA Conference"
     },
     gl: {
         homeTitle: "Portada",
         articlesTitle: "Artigos",
         conferencesTitle: "Charlas",
         teachingTitle: "Cursos onde dou clase",
-        contactTitle: "Contacto"
+        contactTitle: "Contacto",
+        conferencesPodcast: "Episodio de Podcast",
+        conferencesGable: "Conferencia Gable",
+        conferencesCodely: "Conferencia Codely",
+        conferencesDama: "Conferencia DAMA"
     }
 };
 
@@ -23,6 +31,10 @@ function changeLanguage(lang) {
     document.getElementById("conferences-title").textContent = translations[lang].conferencesTitle;
     document.getElementById("teaching-title").textContent = translations[lang].teachingTitle;
     document.getElementById("contact-title").textContent = translations[lang].contactTitle;
+    document.getElementById("conferences-podcast").textContent = translations[lang].conferencesPodcast;
+    document.getElementById("conferences-gable").textContent = translations[lang].conferencesGable;
+    document.getElementById("conferences-codely").textContent = translations[lang].conferencesCodely;
+    document.getElementById("conferences-dama").textContent = translations[lang].conferencesDama;
 
     // Save the selected language in localStorage
     localStorage.setItem("preferredLanguage", lang);

@@ -112,6 +112,7 @@ body {
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.3s;
+    margin: 5px;
 }
 
 .watch-button:hover {
