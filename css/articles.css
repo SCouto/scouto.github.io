@@ -120,6 +120,17 @@ h1 {
 
 .menu-toggle {
     display:none;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+}
+
+.menu-toggle:focus-visible,
+.top-menu ul li a:focus-visible,
+.language-switcher a:focus-visible {
+    outline: 2px solid #0077b5;
+    outline-offset: 2px;
 }
 
 /* Responsive Design */
