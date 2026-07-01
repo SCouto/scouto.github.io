@@ -38,6 +38,9 @@ function changeLanguage(lang) {
 
     // Save the selected language in localStorage
     localStorage.setItem("preferredLanguage", lang);
+
+    // Keep the html lang attribute in sync for accessibility
+    document.documentElement.lang = lang;
 }
 
 // Load the saved language on page load
@@ -58,8 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//Responsiveness in mobile
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('.top-menu ul').classList.toggle('show');
+const menuToggle = document.querySelector('.menu-toggle');
+const menuList = document.querySelector('.top-menu ul');
+menuToggle.addEventListener('click', function() {
+    const isOpen = menuList.classList.toggle('show');
+    menuToggle.setAttribute('aria-expanded', isOpen);
 });
 

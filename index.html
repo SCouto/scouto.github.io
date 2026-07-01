@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sergio Couto</title>
+    <meta name="description" content="Sergio Couto's personal site: data engineering articles, talks, teaching and contact information.">
+    <link rel="icon" type="image/jpeg" href="images/profile/my-profile-picture.jpg">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 
@@ -11,7 +13,7 @@
 <body>
 <!-- Navigation Menu -->
 <nav class="top-menu">
-    <span class="menu-toggle">☰</span>
+    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     <ul>
         <li><a href="index.html" id="home-tittle"></a></li>
         <li><a href="pages/articles.html" id="articles-tittle"></a></li>
@@ -23,18 +25,17 @@
 
 <!-- Language Switcher -->
 <div class="language-switcher">
-    <a href="#" data-lang="en"><img src="images/flags/uk.png" alt="English"></a>
-    <a href="#" data-lang="gl"><img src="images/flags/gz.png" alt="Galego"></a>
+    <a href="#" data-lang="en"><img src="images/flags/uk.png" alt="English" width="30" height="20"></a>
+    <a href="#" data-lang="gl"><img src="images/flags/gz.png" alt="Galego" width="30" height="20"></a>
 </div>
 
 <div class="container">
-    <img src="images/profile/my-profile-picture.jpg" alt="Sergio" class="profile-picture">
+    <img src="images/profile/my-profile-picture.jpg" alt="Sergio" class="profile-picture" width="350" height="350">
     <div class="bio">
         <h1 id="about-me-title"></h1>
         <p id="about-me-text"></p>
     </div>
 </div>
 
-<script src="js/script.js"></script>
 </body>
 </html>
