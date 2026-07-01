@@ -1,77 +1,14 @@
-/* General Styling */
-body {
-    background-color: #f4f4f4;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+/* Teaching-specific styles (shared base in common.css) */
+.container {
+    max-width: 800px;
+}
+
+.page-heading {
+    font-size: 32px;
+    margin: 0 0 24px;
     text-align: center;
 }
 
-/* Navigation Menu */
-.top-menu {
-    background-color: white;
-    padding: 15px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.top-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.top-menu ul li {
-    margin: 0 20px;
-}
-
-.top-menu ul li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.top-menu ul li a:hover {
-    background-color: #0077b5;
-    color: white;
-}
-
-/* Language Switcher Styling */
-.language-switcher {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-    padding: 5px ;
-}
-
-.language-switcher img {
-    width: 30px; /* Adjust flag size */
-    height: 20px;
-    margin: 0 5px; /* Space between flags */
-    cursor: pointer;
-    border: 1px solid #ccc; /* Optional border */
-    border-radius: 3px; /* Optional rounded corners */
-}
-
-/* Teaching Section */
-/* Container for Teaching Page */
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-/* Teaching Items */
 .teaching-list {
     display: flex;
     flex-direction: column;
@@ -81,31 +18,45 @@ body {
 .teaching-item {
     display: flex;
     align-items: center;
-    background: #fff;
+    background: var(--color-surface);
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    gap: 15px; /* Space between logo and text */
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    gap: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.teaching-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 .school-logo {
-    width: 150px;  /* Adjust the size as needed */
+    width: 150px;
     height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .teaching-info {
     display: flex;
-    flex-direction: row;  /* Arrange items in a row */
-    justify-content: space-between; /* Push subject to the right */
-    align-items: center; /* Align items vertically */
-    width: 100%; /* Ensure full width */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
 }
 
 .course-title {
     font-size: 18px;
     font-weight: bold;
-    color: #0056b3;
+    color: var(--color-accent);
     text-decoration: none;
+}
+
+.course-title:hover {
+    text-decoration: underline;
 }
 
 .course-details {
@@ -114,76 +65,20 @@ body {
 }
 
 .subject {
-    color: #555;
-    display: flex;
+    color: var(--color-text-muted);
     font-style: italic;
     text-align: right;
-    white-space: nowrap; /* Prevents wrapping */
+    white-space: nowrap;
 }
 
-.coauthor {
-    display: block;
-    color: #888;
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.menu-toggle {
-    display:none;
-    background: none;
-    border: none;
-    font: inherit;
-    color: inherit;
-}
-
-.menu-toggle:focus-visible,
-.top-menu ul li a:focus-visible,
-.language-switcher a:focus-visible {
-    outline: 2px solid #0077b5;
-    outline-offset: 2px;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .container {
+    .teaching-info {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
     }
 
-    .profile-picture {
-        margin-bottom: 20px;
-        margin-right: 0;
-    }
-
-    .top-menu {
-        position: relative;
-    }
-
-    .top-menu ul {
-        display: none; /* Hidden by default */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .top-menu ul.show {
-        display: flex; /* Show menu when active */
-    }
-
-    .top-menu li {
-        text-align: center;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        padding: 10px;
+    .subject {
+        text-align: left;
+        white-space: normal;
     }
 }

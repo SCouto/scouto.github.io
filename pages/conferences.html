@@ -1,87 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio Couto</title>
+    <title>Talks · Sergio Couto</title>
     <meta name="description" content="Talks and podcast appearances by Sergio Couto on data engineering and data platforms.">
-    <link rel="icon" type="image/jpeg" href="../images/profile/my-profile-picture.jpg">
+    <meta name="author" content="Sergio Couto">
+    <link rel="canonical" href="https://scouto.github.io/pages/conferences.html">
+    <meta name="theme-color" content="#0A66C2">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Talks · Sergio Couto">
+    <meta property="og:description" content="Talks and podcast appearances by Sergio Couto on data engineering and data platforms.">
+    <meta property="og:url" content="https://scouto.github.io/pages/conferences.html">
+    <meta property="og:image" content="https://scouto.github.io/images/profile/apple-touch-icon.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/profile/favicon-32.png">
+    <link rel="apple-touch-icon" href="../images/profile/apple-touch-icon.png">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/conferences.css">
-    <script src="../js/conferences.js" defer></script>
+    <script src="../js/common.js" defer></script>
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Navigation Menu -->
-    <nav class="top-menu">
-        <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-        <ul>
-            <li><a href="../index.html" id="home-title"></a></li>
-            <li><a href="articles.html" id="articles-title"></a></li>
-            <li><a href="conferences.html" id="conferences-title"></a></li>
-            <li><a href="teaching.html" id="teaching-title"></a></li>
-            <li><a href="contact.html" id="contact-title"></a></li>
-        </ul>
-    </nav>
+<!-- Navigation Menu -->
+<nav class="top-menu">
+    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-controls="nav-list" aria-expanded="false">☰</button>
+    <ul id="nav-list">
+        <li><a href="../index.html" data-i18n="homeTitle"></a></li>
+        <li><a href="articles.html" data-i18n="articlesTitle"></a></li>
+        <li><a href="conferences.html" data-i18n="conferencesTitle"></a></li>
+        <li><a href="teaching.html" data-i18n="teachingTitle"></a></li>
+        <li><a href="contact.html" data-i18n="contactTitle"></a></li>
+    </ul>
+</nav>
 
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <a href="#" data-lang="en"><img src="../images/flags/uk.png" alt="English" width="30" height="20"></a>
-        <a href="#" data-lang="gl"><img src="../images/flags/gz.png" alt="Galego" width="30" height="20"></a>
-    </div>
+<!-- Language Switcher -->
+<div class="language-switcher">
+    <button type="button" data-lang="en" aria-pressed="false" aria-label="English"><img src="../images/flags/uk.png" alt="English" width="30" height="20"></button>
+    <button type="button" data-lang="gl" aria-pressed="false" aria-label="Galego"><img src="../images/flags/gz.png" alt="Galego" width="30" height="20"></button>
+</div>
 
-    <div class="container">
-        <div class="conference-grid">
-            <div class="conference-item">
-                <img src="https://img.youtube.com/vi/RA4xp88hLjk/hqdefault.jpg" alt="Podcast"
-                    class="conference-thumbnail">
-                <div class="conference-info">
-                    <h3 id="conferences-podcast"></h3>
-                    <p class="conference-date">February 2026</p>
-                    <p class="conference-desc">Podcast episode about data engineering</p>
-                    <a href="https://youtu.be/RA4xp88hLjk?si=7fRznrXtlswygz-b" target="_blank" rel="noopener noreferrer"
-                        class="watch-button">Watch on YouTube</a>
-                    <a href="https://open.spotify.com/episode/5PQ2Fcfuj6kXjdPPERfPYt?si=7lboghnMSyutqRkgIBXq2Q&t=0&pi=yIowNtOSShq0p"
-                        target="_blank" rel="noopener noreferrer" class="watch-button">Listen on Spotify</a>
-                </div>
+<main id="main" class="container">
+    <h1 class="page-heading" data-i18n="conferencesHeading"></h1>
+    <div class="conference-grid">
+        <div class="conference-item">
+            <img src="https://img.youtube.com/vi/RA4xp88hLjk/hqdefault.jpg" alt="Podcast episode thumbnail"
+                class="conference-thumbnail" width="320" height="180" loading="lazy">
+            <div class="conference-info">
+                <h3 data-i18n="conferencesPodcast"></h3>
+                <p class="conference-date">February 2026</p>
+                <p class="conference-desc">Podcast episode about data engineering</p>
+                <a href="https://youtu.be/RA4xp88hLjk?si=7fRznrXtlswygz-b" target="_blank" rel="noopener noreferrer"
+                    class="watch-button">Watch on YouTube</a>
+                <a href="https://open.spotify.com/episode/5PQ2Fcfuj6kXjdPPERfPYt?si=7lboghnMSyutqRkgIBXq2Q&t=0&pi=yIowNtOSShq0p"
+                    target="_blank" rel="noopener noreferrer" class="watch-button">Listen on Spotify</a>
             </div>
+        </div>
 
-            <div class="conference-item">
-                <img src="https://img.youtube.com/vi/FDi-8F5gAig/hqdefault.jpg" alt="Gable Conference"
-                    class="conference-thumbnail">
-                <div class="conference-info">
-                    <h3 id="conferences-gable"></h3>
-                    <p class="conference-date">March 2025</p>
-                    <p class="conference-desc">Implementation of data contracts in Adevinta in Spain</p>
-                    <a href="https://www.youtube.com/watch?v=FDi-8F5gAig" target="_blank" rel="noopener noreferrer" class="watch-button">Watch</a>
-                </div>
+        <div class="conference-item">
+            <img src="https://img.youtube.com/vi/FDi-8F5gAig/hqdefault.jpg" alt="Gable Conference thumbnail"
+                class="conference-thumbnail" width="320" height="180" loading="lazy">
+            <div class="conference-info">
+                <h3 data-i18n="conferencesGable"></h3>
+                <p class="conference-date">March 2025</p>
+                <p class="conference-desc">Implementation of data contracts in Adevinta in Spain</p>
+                <a href="https://www.youtube.com/watch?v=FDi-8F5gAig" target="_blank" rel="noopener noreferrer" class="watch-button">Watch</a>
             </div>
+        </div>
 
-            <div class="conference-item">
-                <img src="https://img.youtube.com/vi/hd2yh_Tbrno/hqdefault.jpg" alt="Codely Conference"
-                    class="conference-thumbnail">
-                <div class="conference-info">
-                    <h3 id="conferences-codely"></h3>
-                    <p class="conference-date">January 2025</p>
-                    <p class="conference-desc">Building a self-serving data platform – talk at Codely TV.</p>
-                    <a href="https://www.youtube.com/watch?v=hd2yh_Tbrno" target="_blank" rel="noopener noreferrer" class="watch-button">Watch</a>
-                </div>
+        <div class="conference-item">
+            <img src="https://img.youtube.com/vi/hd2yh_Tbrno/hqdefault.jpg" alt="Codely Conference thumbnail"
+                class="conference-thumbnail" width="320" height="180" loading="lazy">
+            <div class="conference-info">
+                <h3 data-i18n="conferencesCodely"></h3>
+                <p class="conference-date">January 2025</p>
+                <p class="conference-desc">Building a self-serving data platform – talk at Codely TV.</p>
+                <a href="https://www.youtube.com/watch?v=hd2yh_Tbrno" target="_blank" rel="noopener noreferrer" class="watch-button">Watch</a>
             </div>
+        </div>
 
-            <div class="conference-item">
-                <img src="https://img.youtube.com/vi/JOKL5dkVli0/hqdefault.jpg" alt="DAMA Conference"
-                    class="conference-thumbnail">
-                <div class="conference-info">
-                    <h3 id="conferences-dama"></h3>
-                    <p class="conference-date">December 2023</p>
-                    <p class="conference-desc">Transitioning from local scripts to data products in Adevinta Spain.</p>
-                    <a href="https://www.youtube.com/watch?v=JOKL5dkVli0" target="_blank" rel="noopener noreferrer" class="watch-button">Watch</a>
-                </div>
+        <div class="conference-item">
+            <img src="https://img.youtube.com/vi/JOKL5dkVli0/hqdefault.jpg" alt="DAMA Conference thumbnail"
+                class="conference-thumbnail" width="320" height="180" loading="lazy">
+            <div class="conference-info">
+                <h3 data-i18n="conferencesDama"></h3>
+                <p class="conference-date">December 2023</p>
+                <p class="conference-desc">Transitioning from local scripts to data products in Adevinta Spain.</p>
+                <a href="https://www.youtube.com/watch?v=JOKL5dkVli0" target="_blank" rel="noopener noreferrer" class="watch-button">Watch</a>
             </div>
         </div>
     </div>
+</main>
 
 </body>
-
 </html>

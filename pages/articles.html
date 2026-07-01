@@ -3,52 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio Couto</title>
+    <title>Articles · Sergio Couto</title>
     <meta name="description" content="Articles by Sergio Couto on data engineering, data products and data platforms.">
-    <link rel="icon" type="image/jpeg" href="../images/profile/my-profile-picture.jpg">
+    <meta name="author" content="Sergio Couto">
+    <link rel="canonical" href="https://scouto.github.io/pages/articles.html">
+    <meta name="theme-color" content="#0A66C2">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Articles · Sergio Couto">
+    <meta property="og:description" content="Articles by Sergio Couto on data engineering, data products and data platforms.">
+    <meta property="og:url" content="https://scouto.github.io/pages/articles.html">
+    <meta property="og:image" content="https://scouto.github.io/images/profile/apple-touch-icon.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/profile/favicon-32.png">
+    <link rel="apple-touch-icon" href="../images/profile/apple-touch-icon.png">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/articles.css">
-    <script src="../js/articles.js" defer></script>
+    <script src="../js/common.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- Navigation Menu -->
 <nav class="top-menu">
-    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-    <ul>
-        <li><a href="../index.html" id="home-title"></a></li>
-        <li><a href="articles.html" id="articles-title"></a></li>
-        <li><a href="conferences.html" id="conferences-title"></a></li>
-        <li><a href="teaching.html" id="teaching-title"></a></li>
-        <li><a href="contact.html" id="contact-title"></a></li>
+    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-controls="nav-list" aria-expanded="false">☰</button>
+    <ul id="nav-list">
+        <li><a href="../index.html" data-i18n="homeTitle"></a></li>
+        <li><a href="articles.html" data-i18n="articlesTitle"></a></li>
+        <li><a href="conferences.html" data-i18n="conferencesTitle"></a></li>
+        <li><a href="teaching.html" data-i18n="teachingTitle"></a></li>
+        <li><a href="contact.html" data-i18n="contactTitle"></a></li>
     </ul>
 </nav>
 
 <!-- Language Switcher -->
 <div class="language-switcher">
-    <a href="#" data-lang="en"><img src="../images/flags/uk.png" alt="English" width="30" height="20"></a>
-    <a href="#" data-lang="gl"><img src="../images/flags/gz.png" alt="Galego" width="30" height="20"></a>
+    <button type="button" data-lang="en" aria-pressed="false" aria-label="English"><img src="../images/flags/uk.png" alt="English" width="30" height="20"></button>
+    <button type="button" data-lang="gl" aria-pressed="false" aria-label="Galego"><img src="../images/flags/gz.png" alt="Galego" width="30" height="20"></button>
 </div>
 
 <!-- Articles Section -->
-<div class="container">
+<main id="main" class="container">
+    <h1 class="page-heading" data-i18n="articlesHeading"></h1>
     <div class="article-list">
         <div class="article">
             <span class="date">November 2024</span>
-            <a href="https://medium.com/adevinta-tech-blog/creating-source-aligned-data-products-in-adevinta-spain-ab96154698c2" class="title">Creating source-aligned data products in Adevinta Spain</a>
+            <a href="https://medium.com/adevinta-tech-blog/creating-source-aligned-data-products-in-adevinta-spain-ab96154698c2" target="_blank" rel="noopener noreferrer" class="title">Creating source-aligned data products in Adevinta Spain</a>
         </div>
 
         <div class="article">
             <span class="date">April 2024</span>
-            <a href="https://medium.com/adevinta-tech-blog/how-we-moved-from-local-scripts-and-spreadsheets-shared-by-email-to-data-products-ade22e9adb2a" class="title">How we moved from local scripts and spreadsheets shared by email to Data Products - Part II</a>
+            <a href="https://medium.com/adevinta-tech-blog/how-we-moved-from-local-scripts-and-spreadsheets-shared-by-email-to-data-products-ade22e9adb2a" target="_blank" rel="noopener noreferrer" class="title">How we moved from local scripts and spreadsheets shared by email to Data Products - Part II</a>
         </div>
 
         <div class="article">
             <span class="date">April 2024</span>
-            <a href="https://medium.com/adevinta-tech-blog/how-we-moved-from-local-scripts-and-spreadsheets-shared-by-email-to-data-products-edaec9228753" class="title">How we moved from local scripts and spreadsheets shared by email to Data Products - Part I</a>
+            <a href="https://medium.com/adevinta-tech-blog/how-we-moved-from-local-scripts-and-spreadsheets-shared-by-email-to-data-products-edaec9228753" target="_blank" rel="noopener noreferrer" class="title">How we moved from local scripts and spreadsheets shared by email to Data Products - Part I</a>
             <span class="coauthor">Co-authored with Marta Diaz</span>
         </div>
     </div>
-</div>
+</main>
 
 </body>
 </html>

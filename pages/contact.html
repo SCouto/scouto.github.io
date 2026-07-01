@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio Couto</title>
+    <title>Contact · Sergio Couto</title>
     <meta name="description" content="Get in touch with Sergio Couto.">
-    <link rel="icon" type="image/jpeg" href="../images/profile/my-profile-picture.jpg">
-    <link rel="stylesheet" href="../css/contact.css">
-    <script src="../js/contact.js" defer></script>
+    <meta name="author" content="Sergio Couto">
+    <link rel="canonical" href="https://scouto.github.io/pages/contact.html">
+    <meta name="theme-color" content="#0A66C2">
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact · Sergio Couto">
+    <meta property="og:description" content="Get in touch with Sergio Couto.">
+    <meta property="og:url" content="https://scouto.github.io/pages/contact.html">
+    <meta property="og:image" content="https://scouto.github.io/images/profile/apple-touch-icon.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/profile/favicon-32.png">
+    <link rel="apple-touch-icon" href="../images/profile/apple-touch-icon.png">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="../js/common.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- Navigation Menu -->
 <nav class="top-menu">
-    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-    <ul>
-        <li><a href="../index.html" id="home-title"></a></li>
-        <li><a href="articles.html" id="articles-title"></a></li>
-        <li><a href="conferences.html" id="conferences-title"></a></li>
-        <li><a href="teaching.html" id="teaching-title"></a></li>
-        <li><a href="contact.html" id="contact-title"></a></li>
+    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-controls="nav-list" aria-expanded="false">☰</button>
+    <ul id="nav-list">
+        <li><a href="../index.html" data-i18n="homeTitle"></a></li>
+        <li><a href="articles.html" data-i18n="articlesTitle"></a></li>
+        <li><a href="conferences.html" data-i18n="conferencesTitle"></a></li>
+        <li><a href="teaching.html" data-i18n="teachingTitle"></a></li>
+        <li><a href="contact.html" data-i18n="contactTitle"></a></li>
     </ul>
 </nav>
 
 <!-- Language Switcher -->
 <div class="language-switcher">
-    <a href="#" data-lang="en"><img src="../images/flags/uk.png" alt="English" width="30" height="20"></a>
-    <a href="#" data-lang="gl"><img src="../images/flags/gz.png" alt="Galego" width="30" height="20"></a>
+    <button type="button" data-lang="en" aria-pressed="false" aria-label="English"><img src="../images/flags/uk.png" alt="English" width="30" height="20"></button>
+    <button type="button" data-lang="gl" aria-pressed="false" aria-label="Galego"><img src="../images/flags/gz.png" alt="Galego" width="30" height="20"></button>
 </div>
 
 <!-- Contact Section -->
-<div class="container">
+<main id="main" class="container">
+    <h1 class="page-heading" data-i18n="contactHeading"></h1>
     <div class="contact-content">
-        <img src="../images/contact/qr-linkedin.png" alt="LinkedIn QR Code" class="qr-code" width="200" height="200">
-        <p>
-           <!-- Connect with me on <a href="https://www.linkedin.com/in/sergiocoutocatoira" target="_blank">LinkedIn</a>.-->
-            <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sergiocoutocatoira" target="_blank" rel="noopener noreferrer">Follow on LinkedIn</a>
-        </p>
+        <img src="../images/contact/qr-linkedin.png" alt="QR code linking to Sergio Couto's LinkedIn profile" class="qr-code" width="200" height="200">
+        <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sergiocoutocatoira" target="_blank" rel="noopener noreferrer">Follow on LinkedIn</a>
     </div>
-</div>
+</main>
 
 </body>
 </html>

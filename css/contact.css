@@ -1,73 +1,12 @@
-/* General Styling */
-body {
-    background-color: #f4f4f4;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* Navigation Menu */
-.top-menu {
-    background-color: white;
-    padding: 15px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.top-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.top-menu ul li {
-    margin: 0 20px;
-}
-
-.top-menu ul li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.top-menu ul li a:hover {
-    background-color: #0077b5;
-    color: white;
-}
-
-/* Language Switcher Styling */
-.language-switcher {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-    padding: 5px ;
-}
-
-.language-switcher img {
-    width: 30px; /* Adjust flag size */
-    height: 20px;
-    margin: 0 5px; /* Space between flags */
-    cursor: pointer;
-    border: 1px solid #ccc; /* Optional border */
-    border-radius: 3px; /* Optional rounded corners */
-}
-
-
+/* Contact-specific styles (shared base in common.css) */
 .container {
     max-width: 600px;
-    margin: 50px auto;
     text-align: center;
+}
+
+.page-heading {
+    font-size: 32px;
+    margin: 0 0 24px;
 }
 
 .contact-content {
@@ -77,93 +16,28 @@ body {
     gap: 20px;
 }
 
-.libutton {
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  padding: 7px;
-                  text-align: center;
-                  outline: none;
-                  text-decoration: none !important;
-                  color: #ffffff !important;
-                  width: 200px;
-                  height: 32px;
-                  border-radius: 16px;
-                  background-color: #0A66C2;
-                  font-family: "SF Pro Text", Helvetica, sans-serif;
-                }
-
 .qr-code {
     width: 200px;
     height: 200px;
+    border-radius: var(--radius-sm);
 }
 
-a {
-    color: #0073b1;
-    font-weight: bold;
+.libutton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    text-align: center;
     text-decoration: none;
+    color: #ffffff;
+    width: 200px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: var(--color-accent);
+    font-weight: bold;
+    transition: background-color 0.25s ease;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-.menu-toggle {
-    display:none;
-    background: none;
-    border: none;
-    font: inherit;
-    color: inherit;
-}
-
-.menu-toggle:focus-visible,
-.top-menu ul li a:focus-visible,
-.language-switcher a:focus-visible {
-    outline: 2px solid #0077b5;
-    outline-offset: 2px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-picture {
-        margin-bottom: 20px;
-        margin-right: 0;
-    }
-
-    .top-menu {
-        position: relative;
-    }
-
-    .top-menu ul {
-        display: none; /* Hidden by default */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .top-menu ul.show {
-        display: flex; /* Show menu when active */
-    }
-
-    .top-menu li {
-        text-align: center;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        padding: 10px;
-    }
+.libutton:hover {
+    background-color: var(--color-accent-hover);
 }

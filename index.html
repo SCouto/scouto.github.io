@@ -3,39 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio Couto</title>
+    <title>Sergio Couto · Data Engineer</title>
     <meta name="description" content="Sergio Couto's personal site: data engineering articles, talks, teaching and contact information.">
-    <link rel="icon" type="image/jpeg" href="images/profile/my-profile-picture.jpg">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
+    <meta name="author" content="Sergio Couto">
+    <link rel="canonical" href="https://scouto.github.io/">
+    <meta name="theme-color" content="#0A66C2">
 
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sergio Couto · Data Engineer">
+    <meta property="og:description" content="Data engineering articles, talks, teaching and contact information.">
+    <meta property="og:url" content="https://scouto.github.io/">
+    <meta property="og:image" content="https://scouto.github.io/images/profile/apple-touch-icon.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/profile/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/profile/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/common.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sergio Couto",
+        "url": "https://scouto.github.io/",
+        "jobTitle": "Data Engineer",
+        "sameAs": [
+            "https://www.linkedin.com/in/sergiocoutocatoira",
+            "https://medium.com/@sergiocouto"
+        ]
+    }
+    </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- Navigation Menu -->
 <nav class="top-menu">
-    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-    <ul>
-        <li><a href="index.html" id="home-tittle"></a></li>
-        <li><a href="pages/articles.html" id="articles-tittle"></a></li>
-        <li><a href="pages/conferences.html" id="conferences-tittle"></a></li>
-        <li><a href="pages/teaching.html" id="teaching-tittle"></a></li>
-        <li><a href="pages/contact.html" id="contact-tittle"></a></li>
+    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-controls="nav-list" aria-expanded="false">☰</button>
+    <ul id="nav-list">
+        <li><a href="index.html" data-i18n="homeTitle"></a></li>
+        <li><a href="pages/articles.html" data-i18n="articlesTitle"></a></li>
+        <li><a href="pages/conferences.html" data-i18n="conferencesTitle"></a></li>
+        <li><a href="pages/teaching.html" data-i18n="teachingTitle"></a></li>
+        <li><a href="pages/contact.html" data-i18n="contactTitle"></a></li>
     </ul>
 </nav>
 
 <!-- Language Switcher -->
 <div class="language-switcher">
-    <a href="#" data-lang="en"><img src="images/flags/uk.png" alt="English" width="30" height="20"></a>
-    <a href="#" data-lang="gl"><img src="images/flags/gz.png" alt="Galego" width="30" height="20"></a>
+    <button type="button" data-lang="en" aria-pressed="false" aria-label="English"><img src="images/flags/uk.png" alt="English" width="30" height="20"></button>
+    <button type="button" data-lang="gl" aria-pressed="false" aria-label="Galego"><img src="images/flags/gz.png" alt="Galego" width="30" height="20"></button>
 </div>
 
-<div class="container">
-    <img src="images/profile/my-profile-picture.jpg" alt="Sergio" class="profile-picture" width="350" height="350">
+<main id="main" class="container">
+    <img src="images/profile/my-profile-picture.jpg" alt="Portrait of Sergio Couto" class="profile-picture" width="350" height="350">
     <div class="bio">
-        <h1 id="about-me-title"></h1>
-        <p id="about-me-text"></p>
+        <h1 data-i18n="aboutMeTitle"></h1>
+        <p data-i18n="aboutMeText"></p>
     </div>
-</div>
+</main>
 
 </body>
 </html>

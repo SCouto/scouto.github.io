@@ -1,0 +1,216 @@
+/* ===== Design tokens ===== */
+:root {
+    --color-accent: #0A66C2;
+    --color-accent-hover: #004182;
+    --color-text: #1a1a1a;
+    --color-text-muted: #5a5a5a;
+    --color-bg: #f4f4f4;
+    --color-surface: #ffffff;
+    --color-border: #e2e2e2;
+
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+    --radius: 12px;
+    --radius-sm: 6px;
+
+    --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-accent: #4a9eff;
+        --color-accent-hover: #7fbcff;
+        --color-text: #e8e8e8;
+        --color-text-muted: #a8a8a8;
+        --color-bg: #121212;
+        --color-surface: #1e1e1e;
+        --color-border: #333333;
+
+        --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.4);
+        --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    color: var(--color-accent);
+}
+
+/* Skip link (visually hidden until focused) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 0 0 var(--radius-sm) 0;
+    z-index: 1100;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+/* ===== Navigation ===== */
+.top-menu {
+    background-color: var(--color-surface);
+    padding: 15px 0;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.top-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu ul li {
+    margin: 0 20px;
+}
+
+.top-menu ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.top-menu ul li a:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+.top-menu ul li a[aria-current="page"] {
+    color: var(--color-accent);
+}
+
+.top-menu ul li a[aria-current="page"]:hover {
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+}
+
+/* ===== Language switcher ===== */
+.language-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    padding: 5px;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 5px;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.language-switcher img {
+    width: 30px;
+    height: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    opacity: 0.55;
+    transition: opacity 0.2s ease, outline-color 0.2s ease;
+}
+
+.language-switcher button[aria-pressed="true"] img {
+    opacity: 1;
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+}
+
+.language-switcher button:hover img {
+    opacity: 1;
+}
+
+/* ===== Focus states ===== */
+.menu-toggle:focus-visible,
+.top-menu ul li a:focus-visible,
+.language-switcher button:focus-visible,
+.skip-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ===== Shared container ===== */
+.container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    text-align: left;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .container {
+        margin: 40px auto;
+        padding: 24px;
+    }
+
+    .top-menu {
+        position: sticky;
+    }
+
+    .top-menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--color-surface);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .top-menu ul.show {
+        display: flex;
+    }
+
+    .top-menu li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+    }
+}
