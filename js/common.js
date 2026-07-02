@@ -16,7 +16,24 @@ const translations = {
         conferencesPodcast: "Podcast Episode",
         conferencesGable: "Gable Conference",
         conferencesCodely: "Codely Conference",
-        conferencesDama: "DAMA Conference"
+        conferencesDama: "DAMA Conference",
+        articleDate1: "November 2024",
+        articleDate2: "April 2024",
+        articleDate3: "April 2024",
+        articleCoauthor3: "Co-authored with Marta Diaz",
+        conferencesPodcastDate: "February 2026",
+        conferencesPodcastDesc: "Podcast episode about data engineering",
+        conferencesGableDate: "March 2025",
+        conferencesGableDesc: "Implementation of data contracts in Adevinta in Spain",
+        conferencesCodelyDate: "January 2025",
+        conferencesCodelyDesc: "Building a self-serving data platform – talk at Codely TV.",
+        conferencesDamaDate: "December 2023",
+        conferencesDamaDesc: "Transitioning from local scripts to data products in Adevinta Spain.",
+        teachingSubject1: "Final Project Tutor",
+        teachingSubject2: "Data processing with Databricks",
+        teachingSubject3: "Machine Learning with Spark",
+        teachingSubject4: "MLOps",
+        teachingSubject5: "Spark"
     },
     gl: {
         homeTitle: "Portada",
@@ -33,7 +50,24 @@ const translations = {
         conferencesPodcast: "Episodio de Podcast",
         conferencesGable: "Conferencia Gable",
         conferencesCodely: "Conferencia Codely",
-        conferencesDama: "Conferencia DAMA"
+        conferencesDama: "Conferencia DAMA",
+        articleDate1: "Novembro 2024",
+        articleDate2: "Abril 2024",
+        articleDate3: "Abril 2024",
+        articleCoauthor3: "Coescrito con Marta Diaz",
+        conferencesPodcastDate: "Febreiro 2026",
+        conferencesPodcastDesc: "Episodio de podcast sobre enxeñaría de datos",
+        conferencesGableDate: "Marzo 2025",
+        conferencesGableDesc: "Implementación de contratos de datos en Adevinta en España",
+        conferencesCodelyDate: "Xaneiro 2025",
+        conferencesCodelyDesc: "Construíndo unha plataforma de datos self-service – charla en Codely TV.",
+        conferencesDamaDate: "Decembro 2023",
+        conferencesDamaDesc: "Transición de scripts locais a produtos de datos en Adevinta España.",
+        teachingSubject1: "Titor de Proxecto Final",
+        teachingSubject2: "Procesamento de datos con Databricks",
+        teachingSubject3: "Aprendizaxe Automática con Spark",
+        teachingSubject4: "MLOps",
+        teachingSubject5: "Spark"
     }
 };
 
