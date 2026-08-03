@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sergio Couto · Data Engineer</title>
-    <meta name="description" content="Sergio Couto's personal site: data engineering articles, talks, teaching and contact information.">
+    <meta name="description" content="Sergio Couto's personal site: data engineering articles, talks, teaching, and the Android apps I build on the side.">
     <meta name="author" content="Sergio Couto">
     <link rel="canonical" href="https://scouto.github.io/">
-    <meta name="theme-color" content="#0A66C2">
+    <meta name="theme-color" content="#2f6bff">
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sergio Couto · Data Engineer">
-    <meta property="og:description" content="Data engineering articles, talks, teaching and contact information.">
+    <meta property="og:description" content="Data engineering articles, talks, teaching, and the Android apps I build on the side.">
     <meta property="og:url" content="https://scouto.github.io/">
     <meta property="og:image" content="https://scouto.github.io/images/profile/apple-touch-icon.png">
     <meta name="twitter:card" content="summary">
 
     <link rel="icon" type="image/png" sizes="32x32" href="images/profile/favicon-32.png">
     <link rel="apple-touch-icon" href="images/profile/apple-touch-icon.png">
+
+    <!-- Apply the stored theme before first paint so there's no flash. -->
+    <script>(function(){var t=null;try{t=localStorage.getItem("theme");}catch(e){}if(t==="dark"||t==="light"){document.documentElement.dataset.theme=t;}})();</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/common.js" defer></script>
@@ -32,7 +39,8 @@
         "jobTitle": "Data Engineer",
         "sameAs": [
             "https://www.linkedin.com/in/sergiocoutocatoira",
-            "https://medium.com/@sergiocouto"
+            "https://medium.com/@sergiocouto",
+            "https://github.com/SCouto"
         ]
     }
     </script>
@@ -40,31 +48,99 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- Navigation Menu -->
-<nav class="top-menu">
-    <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-controls="nav-list" aria-expanded="false">☰</button>
-    <ul id="nav-list">
-        <li><a href="index.html" data-i18n="homeTitle"></a></li>
-        <li><a href="pages/articles.html" data-i18n="articlesTitle"></a></li>
-        <li><a href="pages/conferences.html" data-i18n="conferencesTitle"></a></li>
-        <li><a href="pages/teaching.html" data-i18n="teachingTitle"></a></li>
-        <li><a href="pages/contact.html" data-i18n="contactTitle"></a></li>
-    </ul>
-</nav>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="wordmark" href="index.html">Sergio <span>Couto</span></a>
 
-<!-- Language Switcher -->
-<div class="language-switcher">
-    <button type="button" data-lang="en" aria-pressed="false" aria-label="English"><img src="images/flags/uk.png" alt="English" width="30" height="20"></button>
-    <button type="button" data-lang="gl" aria-pressed="false" aria-label="Galego"><img src="images/flags/gz.png" alt="Galego" width="30" height="20"></button>
-</div>
+        <nav class="top-menu" aria-label="Main">
+            <ul id="nav-list">
+                <li><a href="index.html" data-i18n="homeTitle"></a></li>
+                <li><a href="pages/apps.html" data-i18n="appsTitle"></a></li>
+                <li><a href="pages/articles.html" data-i18n="articlesTitle"></a></li>
+                <li><a href="pages/conferences.html" data-i18n="conferencesTitle"></a></li>
+                <li><a href="pages/teaching.html" data-i18n="teachingTitle"></a></li>
+                <li><a href="pages/contact.html" data-i18n="contactTitle"></a></li>
+            </ul>
+        </nav>
+
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button type="button" data-lang="en" aria-pressed="false" aria-label="English"><img src="images/flags/uk.png" alt="English" width="26" height="18"></button>
+                <button type="button" data-lang="gl" aria-pressed="false" aria-label="Galego"><img src="images/flags/gz.png" alt="Galego" width="26" height="18"></button>
+            </div>
+            <button type="button" class="theme-toggle" data-i18n-aria="themeToggleLabel" aria-label="Switch between light and dark theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            </button>
+        </div>
+
+        <button type="button" class="menu-toggle" data-i18n-aria="menuToggleLabel" aria-label="Toggle navigation menu" aria-controls="nav-list" aria-expanded="false">☰</button>
+    </div>
+</header>
 
 <main id="main" class="container">
-    <img src="images/profile/my-profile-picture.jpg" alt="Portrait of Sergio Couto" class="profile-picture" width="350" height="350">
-    <div class="bio">
-        <h1 data-i18n="aboutMeTitle"></h1>
-        <p data-i18n="aboutMeText"></p>
-    </div>
+    <section class="hero">
+        <div class="hero-avatar">
+            <img src="images/profile/my-profile-picture.jpg" alt="Portrait of Sergio Couto" width="350" height="350">
+        </div>
+        <div class="hero-body">
+            <span class="eyebrow" data-i18n="heroEyebrow"></span>
+            <h1><span data-i18n="heroGreeting"></span> <span class="accent">Sergio Couto</span></h1>
+            <p class="hero-lead" data-i18n="heroLead"></p>
+            <div class="hero-actions">
+                <a class="btn btn--primary" href="pages/apps.html" data-i18n="heroCtaApps"></a>
+                <a class="btn btn--ghost" href="pages/contact.html" data-i18n="heroCtaContact"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="home-apps-heading">
+        <span class="eyebrow" data-i18n="homeAppsEyebrow"></span>
+        <h2 class="section-heading" id="home-apps-heading" data-i18n="homeAppsHeading"></h2>
+        <p class="section-note" data-i18n="homeAppsNote"></p>
+
+        <div class="card-grid card-grid--compact">
+            <article class="card app-card">
+                <img class="app-icon" src="images/apps/redquiz.png" alt="" width="56" height="56" loading="lazy">
+                <h3><a href="https://play.google.com/store/apps/details?id=com.redquiz" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="appRedquizName"></a></h3>
+                <p class="meta" data-i18n="badgeLive"></p>
+            </article>
+
+            <article class="card app-card">
+                <img class="app-icon" src="images/apps/galician.png" alt="" width="56" height="56" loading="lazy">
+                <h3><a href="https://play.google.com/store/apps/details?id=com.cards.galician" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="appGalicianName"></a></h3>
+                <p class="meta" data-i18n="badgeLive"></p>
+            </article>
+
+            <article class="card app-card">
+                <img class="app-icon" src="images/apps/multiplica.png" alt="" width="56" height="56" loading="lazy">
+                <h3><a href="https://play.google.com/store/apps/details?id=com.aprende.multiplica" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="appMultiplicaName"></a></h3>
+                <p class="meta" data-i18n="badgeLive"></p>
+            </article>
+
+            <article class="card app-card">
+                <img class="app-icon" src="images/apps/forxarpg.png" alt="" width="56" height="56" loading="lazy">
+                <h3><a href="https://play.google.com/store/apps/details?id=com.forja.rpg" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="appForxarpgName"></a></h3>
+                <p class="meta" data-i18n="badgeLive"></p>
+            </article>
+        </div>
+
+        <p class="section-more">
+            <a href="pages/apps.html" data-i18n="homeAppsAll"></a>
+        </p>
+    </section>
 </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-copy">© <span data-year>2026</span> Sergio Couto · <span data-i18n="footerNote"></span></p>
+        <nav class="footer-links" data-i18n-aria="footerNav" aria-label="Site links">
+            <a href="https://www.linkedin.com/in/sergiocoutocatoira" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://medium.com/@sergiocouto" target="_blank" rel="noopener noreferrer">Medium</a>
+            <a href="https://github.com/SCouto" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+    </div>
+</footer>
 
 </body>
 </html>
