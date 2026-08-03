@@ -13,7 +13,7 @@ This is a static personal portfolio website (GitHub Pages) for Sergio Couto, fea
 **Theming**: Three-way. `:root` holds the light tokens; dark is applied either by `@media (prefers-color-scheme: dark) :root:not([data-theme="light"])` (follow the OS) or by an explicit `:root[data-theme="dark"]` (chosen with the toggle). The `.theme-toggle` button writes `data-theme` on `<html>` and persists it in `localStorage` as `theme`; no stored value means "follow the OS". Each page's `<head>` carries a tiny inline script that applies the stored theme **before first paint** so there is no flash — keep it there when adding a page.
 
 **Page Structure**: The site follows a consistent pattern where:
-- `index.html` serves as the homepage (hero + featured-apps teaser)
+- `index.html` serves as the homepage (hero + a "What I do" card grid pointing at articles/talks/teaching). It stays focused on data engineering — the Android apps are a hobby and live only on `pages/apps.html`, which sits late in the nav. Don't promote them onto the homepage.
 - Section pages live in `pages/` directory (apps.html, articles.html, conferences.html, teaching.html, contact.html)
 - Shared styles live in `css/common.css` (design tokens + header + shared components + responsive base); each page adds a small section-only stylesheet (`css/styles.css`, `apps.css`, `articles.css`, etc.)
 - All pages load `css/common.css` + their page CSS, the Google Fonts stylesheet (Inter + Space Grotesk), and the single `js/common.js`

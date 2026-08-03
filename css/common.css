@@ -603,11 +603,6 @@ button:focus-visible,
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
 }
 
-/* Home teaser: four apps, four columns — never 3 + 1 orphan. */
-.card-grid--compact {
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-}
-
 .card {
     position: relative;
     display: flex;
@@ -630,6 +625,21 @@ button:focus-visible,
 .card h2,
 .card h3 {
     font-size: var(--step-1);
+}
+
+.card-desc {
+    color: var(--color-text-muted);
+    font-size: var(--step--1);
+    flex: 1;
+}
+
+.card h3 a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.card:hover h3 a {
+    color: var(--color-accent);
 }
 
 /* A whole card is clickable when it holds a single stretched link. */
@@ -670,15 +680,6 @@ button:focus-visible,
     background: var(--color-surface-2);
 }
 
-.app-card h3 a {
-    text-decoration: none;
-    color: var(--color-text);
-}
-
-.app-card:hover h3 a {
-    color: var(--color-accent);
-}
-
 .app-card .app-desc {
     color: var(--color-text-muted);
     font-size: var(--step--1);
@@ -689,19 +690,6 @@ button:focus-visible,
     align-self: flex-start;
     position: relative;
     z-index: 1;
-}
-
-.section-more {
-    margin-top: var(--space-6);
-}
-
-.section-more a {
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.section-more a::after {
-    content: " →";
 }
 
 /* ===== Badges ===== */
