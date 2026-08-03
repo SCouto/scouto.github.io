@@ -1,43 +1,17 @@
-/* Contact-specific styles (shared base in common.css) */
-.container {
-    max-width: 600px;
-    text-align: center;
-}
+/* Contact page specifics (card primitives live in common.css) */
 
-.page-heading {
-    font-size: 32px;
-    margin: 0 0 24px;
-}
-
-.contact-content {
-    display: flex;
-    flex-direction: column;
+.contact-card {
     align-items: center;
-    gap: 20px;
+    text-align: center;
+    gap: var(--space-5);
+    max-width: 420px;
+    padding: var(--space-7);
 }
 
 .qr-code {
     width: 200px;
     height: 200px;
-    border-radius: var(--radius-sm);
-}
-
-.libutton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7px;
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-    width: 200px;
-    height: 32px;
-    border-radius: 16px;
-    background-color: var(--color-accent);
-    font-weight: bold;
-    transition: background-color 0.25s ease;
-}
-
-.libutton:hover {
-    background-color: var(--color-accent-hover);
+    border-radius: var(--radius-md);
+    background: #ffffff;
+    padding: var(--space-3);
 }

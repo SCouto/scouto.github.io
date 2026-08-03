@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps · Sergio Couto</title>
+    <meta name="description" content="Android apps built by Sergio Couto: quizzes, vocabulary flashcards and small tools. Four are live on Google Play and four are in closed testing looking for testers.">
+    <meta name="author" content="Sergio Couto">
+    <link rel="canonical" href="https://scouto.github.io/pages/apps.html">
+    <meta name="theme-color" content="#2f6bff">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Apps · Sergio Couto">
+    <meta property="og:description" content="Android apps built by Sergio Couto. Four live on Google Play, four in closed testing looking for testers.">
+    <meta property="og:url" content="https://scouto.github.io/pages/apps.html">
+    <meta property="og:image" content="https://scouto.github.io/images/profile/apple-touch-icon.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/profile/favicon-32.png">
+    <link rel="apple-touch-icon" href="../images/profile/apple-touch-icon.png">
+
+    <!-- Apply the stored theme before first paint so there's no flash. -->
+    <script>(function(){var t=null;try{t=localStorage.getItem("theme");}catch(e){}if(t==="dark"||t==="light"){document.documentElement.dataset.theme=t;}})();</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/apps.css">
+    <script src="../js/common.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a class="wordmark" href="../index.html">Sergio <span>Couto</span></a>
+
+        <nav class="top-menu" aria-label="Main">
+            <ul id="nav-list">
+                <li><a href="../index.html" data-i18n="homeTitle"></a></li>
+                <li><a href="articles.html" data-i18n="articlesTitle"></a></li>
+                <li><a href="conferences.html" data-i18n="conferencesTitle"></a></li>
+                <li><a href="teaching.html" data-i18n="teachingTitle"></a></li>
+                <li><a href="apps.html" data-i18n="appsTitle"></a></li>
+                <li><a href="contact.html" data-i18n="contactTitle"></a></li>
+            </ul>
+        </nav>
+
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button type="button" data-lang="en" aria-pressed="false" aria-label="English"><img src="../images/flags/uk.png" alt="English" width="26" height="18"></button>
+                <button type="button" data-lang="gl" aria-pressed="false" aria-label="Galego"><img src="../images/flags/gz.png" alt="Galego" width="26" height="18"></button>
+            </div>
+            <button type="button" class="theme-toggle" data-i18n-aria="themeToggleLabel" aria-label="Switch between light and dark theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            </button>
+        </div>
+
+        <button type="button" class="menu-toggle" data-i18n-aria="menuToggleLabel" aria-label="Toggle navigation menu" aria-controls="nav-list" aria-expanded="false">☰</button>
+    </div>
+</header>
+
+<main id="main" class="container">
+    <h1 class="page-heading" data-i18n="appsHeading"></h1>
+    <p class="page-intro" data-i18n="appsIntro"></p>
+
+    <!-- ===== Production ===== -->
+    <section aria-labelledby="apps-live-heading">
+        <h2 class="section-heading" id="apps-live-heading" data-i18n="appsLiveHeading"></h2>
+        <p class="section-note" data-i18n="appsLiveNote"></p>
+
+        <div class="card-grid card-grid--wide">
+            <article class="card app-card">
+                <div class="app-head">
+                    <img class="app-icon" src="../images/apps/redquiz.png" alt="" width="56" height="56" loading="lazy">
+                    <div class="app-head-text">
+                        <h3 data-i18n="appRedquizName"></h3>
+                        <span class="badge badge--live" data-i18n="badgeLive"></span>
+                    </div>
+                </div>
+                <p class="app-desc" data-i18n="appRedquizDesc"></p>
+                <a class="btn btn--primary btn--sm" href="https://play.google.com/store/apps/details?id=com.redquiz" target="_blank" rel="noopener noreferrer" data-i18n="appsPlayCta"></a>
+            </article>
+
+            <article class="card app-card">
+                <div class="app-head">
+                    <img class="app-icon" src="../images/apps/galician.png" alt="" width="56" height="56" loading="lazy">
+                    <div class="app-head-text">
+                        <h3 data-i18n="appGalicianName"></h3>
+                        <span class="badge badge--live" data-i18n="badgeLive"></span>
+                    </div>
+                </div>
+                <p class="app-desc" data-i18n="appGalicianDesc"></p>
+                <a class="btn btn--primary btn--sm" href="https://play.google.com/store/apps/details?id=com.cards.galician" target="_blank" rel="noopener noreferrer" data-i18n="appsPlayCta"></a>
+            </article>
+
+            <article class="card app-card">
+                <div class="app-head">
+                    <img class="app-icon" src="../images/apps/multiplica.png" alt="" width="56" height="56" loading="lazy">
+                    <div class="app-head-text">
+                        <h3 data-i18n="appMultiplicaName"></h3>
+                        <span class="badge badge--live" data-i18n="badgeLive"></span>
+                    </div>
+                </div>
+                <p class="app-desc" data-i18n="appMultiplicaDesc"></p>
+                <a class="btn btn--primary btn--sm" href="https://play.google.com/store/apps/details?id=com.aprende.multiplica" target="_blank" rel="noopener noreferrer" data-i18n="appsPlayCta"></a>
+            </article>
+
+            <article class="card app-card">
+                <div class="app-head">
+                    <img class="app-icon" src="../images/apps/forxarpg.png" alt="" width="56" height="56" loading="lazy">
+                    <div class="app-head-text">
+                        <h3 data-i18n="appForxarpgName"></h3>
+                        <span class="badge badge--live" data-i18n="badgeLive"></span>
+                    </div>
+                </div>
+                <p class="app-desc" data-i18n="appForxarpgDesc"></p>
+                <a class="btn btn--primary btn--sm" href="https://play.google.com/store/apps/details?id=com.forja.rpg" target="_blank" rel="noopener noreferrer" data-i18n="appsPlayCta"></a>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== Closed testing =====
+         TODO: replace every href="#" below with that app's Google Group join URL
+         (https://groups.google.com/g/<group-name>). Until then the buttons are inert. -->
+    <section class="section" aria-labelledby="apps-testing-heading">
+        <h2 class="section-heading" id="apps-testing-heading" data-i18n="appsTestingHeading"></h2>
+        <p class="section-note" data-i18n="appsTestingNote"></p>
+
+        <div class="card-grid card-grid--wide">
+            <article class="card app-card">
+                <div class="app-head">
+                    <img class="app-icon" src="../images/apps/batterytemp.png" alt="" width="56" height="56" loading="lazy">
+                    <div class="app-head-text">
+                        <h3 data-i18n="appBatterytempName"></h3>
+                        <span class="badge badge--testing" data-i18n="badgeTesting"></span>
+                    </div>
+                </div>
+                <p class="app-desc" data-i18n="appBatterytempDesc"></p>
+                <!-- TODO: Google Group join URL for Battery Temp -->
+                <a class="btn btn--ghost btn--sm" href="#" data-todo="paste Google Group join URL" data-i18n="appsTesterCta"></a>
+            </article>
+
+            <article class="card app-card">
+                <div class="app-head">
+                    <img class="app-icon" src="../images/apps/enguardia.png" alt="" width="56" height="56" loading="lazy">
+                    <div class="app-head-text">
+                        <h3 data-i18n="appEnguardiaName"></h3>
+                        <span class="badge badge--testing" data-i18n="badgeTesting"></span>
+                    </div>
+                </div>
+                <p class="app-desc" data-i18n="appEnguardiaDesc"></p>
+                <!-- TODO: Google Group join URL for Enguardia -->
+                <a class="btn btn--ghost btn--sm" href="#" data-todo="paste Google Group join URL" data-i18n="appsTesterCta"></a>
+            </article>
+
+            <article class="card app-card">
+                <div class="app-head">
+                    <img class="app-icon" src="../images/apps/valyrian.png" alt="" width="56" height="56" loading="lazy">
+                    <div class="app-head-text">
+                        <h3 data-i18n="appValyrianName"></h3>
+                        <span class="badge badge--testing" data-i18n="badgeTesting"></span>
+                    </div>
+                </div>
+                <p class="app-desc" data-i18n="appValyrianDesc"></p>
+                <!-- TODO: Google Group join URL for Valyrian Vocabulary -->
+                <a class="btn btn--ghost btn--sm" href="#" data-todo="paste Google Group join URL" data-i18n="appsTesterCta"></a>
+            </article>
+
+            <article class="card app-card">
+                <div class="app-head">
+                    <img class="app-icon" src="../images/apps/russian.png" alt="" width="56" height="56" loading="lazy">
+                    <div class="app-head-text">
+                        <h3 data-i18n="appRussianName"></h3>
+                        <span class="badge badge--testing" data-i18n="badgeTesting"></span>
+                    </div>
+                </div>
+                <p class="app-desc" data-i18n="appRussianDesc"></p>
+                <!-- TODO: Google Group join URL for Russian Vocabulary -->
+                <a class="btn btn--ghost btn--sm" href="#" data-todo="paste Google Group join URL" data-i18n="appsTesterCta"></a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-copy">© <span data-year>2026</span> Sergio Couto · <span data-i18n="footerNote"></span></p>
+        <nav class="footer-links" data-i18n-aria="footerNav" aria-label="Site links">
+            <a href="https://www.linkedin.com/in/sergiocoutocatoira" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://medium.com/@sergiocouto" target="_blank" rel="noopener noreferrer">Medium</a>
+            <a href="https://github.com/SCouto" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+    </div>
+</footer>
+
+</body>
+</html>
