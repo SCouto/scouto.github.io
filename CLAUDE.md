@@ -53,7 +53,8 @@ To check a change locally, serve the repo (`python3 -m http.server 8000`) rather
 **production** and **closed testing** by that repo's `release-config.properties`. App icons live in
 `images/apps/<slug>.png`, exported from each app's `mipmap-xxxhdpi/ic_launcher.png` (for `valyrian`
 and `russian`, which ship adaptive-only icons, the foreground is composited over the solid colour in
-their `values/ic_launcher_background.xml`). Each closed-testing card's "become a tester" button is a
-placeholder `href="#"` marked with `data-todo` — replace them with the real Google Group join URLs.
+their `values/ic_launcher_background.xml`). Each closed-testing card's "become a tester" button points
+at the shared Google Group `https://groups.google.com/g/scouto_android_testers`
+(`scouto_android_testers@googlegroups.com`), which is the tester list on every closed-testing track.
 When an app graduates to production, move its card to the first grid, swap `.badge--testing` for
 `.badge--live` and point the button at `https://play.google.com/store/apps/details?id=<applicationId>`.
