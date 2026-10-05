@@ -87,10 +87,6 @@ const translations = {
         appForxarpgDesc: "A step-by-step character creator for classic fantasy roleplaying games — races, classes, stats and equipment.",
         appBatterytempName: "Battery Temp",
         appBatterytempDesc: "See your battery temperature at a glance from a home-screen widget, without opening anything.",
-        appEnguardiaName: "Enguardia",
-        appEnguardiaDesc: "Shift scheduling for medical teams: build a rota that respects everyone's availability and constraints.",
-        appValyrianName: "Valyrian Vocabulary",
-        appValyrianDesc: "High Valyrian flashcards, with a hand-checked verb conjugation table and widgets to review every day.",
         appRussianName: "Russian Vocabulary",
         appRussianDesc: "Russian vocabulary flashcards with real pronunciation, conjugation tables and home-screen widgets.",
 
@@ -183,10 +179,6 @@ const translations = {
         appForxarpgDesc: "Un creador de personaxes paso a paso para xogos de rol de fantasía clásicos — razas, clases, atributos e equipo.",
         appBatterytempName: "Temp. Batería",
         appBatterytempDesc: "Consulta a temperatura da batería dunha ollada desde un widget, sen abrir nada.",
-        appEnguardiaName: "Enguardia",
-        appEnguardiaDesc: "Organización de gardas para equipos médicos: monta un cadro que respecte a dispoñibilidade e as restricións de cadaquén.",
-        appValyrianName: "Vocabulario Valyrio",
-        appValyrianDesc: "Tarxetas de alto valyrio, cunha táboa de conxugación revisada a man e widgets para repasar cada día.",
         appRussianName: "Vocabulario Ruso",
         appRussianDesc: "Tarxetas de vocabulario ruso con pronuncia real, táboas de conxugación e widgets na pantalla de inicio.",
 

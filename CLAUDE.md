@@ -51,9 +51,9 @@ To check a change locally, serve the repo (`python3 -m http.server 8000`) rather
 
 `pages/apps.html` lists the Android apps from the companion `SCouto/android` monorepo, split into
 **production** and **closed testing** by that repo's `release-config.properties`. App icons live in
-`images/apps/<slug>.png`, exported from each app's `mipmap-xxxhdpi/ic_launcher.png` (for `valyrian`
-and `russian`, which ship adaptive-only icons, the foreground is composited over the solid colour in
-their `values/ic_launcher_background.xml`). Each closed-testing card's "become a tester" button points
+`images/apps/<slug>.png`, exported from each app's `mipmap-xxxhdpi/ic_launcher.png` (for `russian`,
+which ships adaptive-only icons, the foreground is composited over the solid colour in
+its `values/ic_launcher_background.xml`). Each closed-testing card's "become a tester" button points
 at the shared Google Group `https://groups.google.com/g/scouto_android_testers`
 (`scouto_android_testers@googlegroups.com`), which is the tester list on every closed-testing track.
 When an app graduates to production, move its card to the first grid, swap `.badge--testing` for
