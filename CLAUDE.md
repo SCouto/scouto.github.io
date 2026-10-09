@@ -13,9 +13,9 @@ This is a static personal portfolio website (GitHub Pages) for Sergio Couto, fea
 **Theming**: Three-way. `:root` holds the light tokens; dark is applied either by `@media (prefers-color-scheme: dark) :root:not([data-theme="light"])` (follow the OS) or by an explicit `:root[data-theme="dark"]` (chosen with the toggle). The `.theme-toggle` button writes `data-theme` on `<html>` and persists it in `localStorage` as `theme`; no stored value means "follow the OS". Each page's `<head>` carries a tiny inline script that applies the stored theme **before first paint** so there is no flash — keep it there when adding a page.
 
 **Page Structure**: The site follows a consistent pattern where:
-- `index.html` serves as the homepage (hero + a "What I do" card grid pointing at articles/talks/teaching). It stays focused on data engineering — the Android apps are a hobby and live only on `pages/apps.html`, which sits late in the nav. Don't promote them onto the homepage.
-- Section pages live in `pages/` directory (apps.html, articles.html, conferences.html, teaching.html, contact.html)
-- Shared styles live in `css/common.css` (design tokens + header + shared components + responsive base); each page adds a small section-only stylesheet (`css/styles.css`, `apps.css`, `articles.css`, etc.)
+- `index.html` serves as the homepage (hero + a "What I do" card grid pointing at articles/talks/teaching). It stays focused on data engineering — the Android apps are a hobby and are not linked from this site. Don't promote them onto the homepage.
+- Section pages live in `pages/` directory (articles.html, conferences.html, teaching.html, contact.html).
+- Shared styles live in `css/common.css` (design tokens + header + shared components + responsive base); each page adds a small section-only stylesheet (`css/styles.css`, `articles.css`, etc.)
 - All pages load `css/common.css` + their page CSS, the Google Fonts stylesheet (Inter + Space Grotesk), and the single `js/common.js`
 - All pages share the same `<header class="site-header">` and `<footer class="site-footer">`
 
@@ -46,15 +46,3 @@ To translate new content: add `data-i18n="myKey"` to the element and add `myKey`
 This is a static site hosted on GitHub Pages. There are no build steps, dependency installations, or testing frameworks. Changes are made directly to HTML, CSS, and JavaScript files and deployed via git push to the main branch.
 
 To check a change locally, serve the repo (`python3 -m http.server 8000`) rather than opening files with `file://` — the relative `../` asset paths and `localStorage` both need a real origin.
-
-## Apps page
-
-`pages/apps.html` lists the Android apps from the companion `SCouto/android` monorepo, split into
-**production** and **closed testing** by that repo's `release-config.properties`. App icons live in
-`images/apps/<slug>.png`, exported from each app's `mipmap-xxxhdpi/ic_launcher.png` (for `russian`,
-which ships adaptive-only icons, the foreground is composited over the solid colour in
-its `values/ic_launcher_background.xml`). Each closed-testing card's "become a tester" button points
-at the shared Google Group `https://groups.google.com/g/scouto_android_testers`
-(`scouto_android_testers@googlegroups.com`), which is the tester list on every closed-testing track.
-When an app graduates to production, move its card to the first grid, swap `.badge--testing` for
-`.badge--live` and point the button at `https://play.google.com/store/apps/details?id=<applicationId>`.

@@ -9,7 +9,6 @@ const translations = {
         conferencesTitle: "Talks",
         teachingTitle: "Teaching",
         contactTitle: "Contact",
-        appsTitle: "Apps",
         menuToggleLabel: "Toggle navigation menu",
         themeToggleLabel: "Switch between light and dark theme",
 
@@ -65,31 +64,6 @@ const translations = {
         teachingSubject4: "MLOps",
         teachingSubject5: "Spark",
 
-        // Apps page
-        appsHeading: "Android apps",
-        appsIntro: "Side projects I build and maintain on my own: quizzes, vocabulary flashcards and small everyday tools. Most of them are in Galician, and all of them are free.",
-        appsLiveHeading: "Available on Google Play",
-        appsLiveNote: "Published and available to everyone.",
-        appsTestingHeading: "In closed testing",
-        appsTestingNote: "These apps are still in closed testing on Google Play, so they aren't publicly listed yet. I'm looking for testers — join the testing group for an app and you'll be able to install it from Google Play and send me feedback. Any help is very welcome.",
-        badgeLive: "On Google Play",
-        badgeTesting: "Closed testing",
-        appsPlayCta: "Google Play",
-        appsTesterCta: "Become a tester",
-
-        appRedquizName: "Red Quiz",
-        appRedquizDesc: "A political geography quiz: flags, people and historical events, with online challenges against other players.",
-        appGalicianName: "Palabras Galegas",
-        appGalicianDesc: "Learn Galician vocabulary with flashcards, home-screen widgets, daily reminders and pronunciation.",
-        appMultiplicaName: "MultiplicApp",
-        appMultiplicaDesc: "Practise multiplication tables. Built for kids, with progress tracking and short timed drills.",
-        appForxarpgName: "Forxa de Lendas",
-        appForxarpgDesc: "A step-by-step character creator for classic fantasy roleplaying games — races, classes, stats and equipment.",
-        appBatterytempName: "Battery Temp",
-        appBatterytempDesc: "See your battery temperature at a glance from a home-screen widget, without opening anything.",
-        appRussianName: "Russian Vocabulary",
-        appRussianDesc: "Russian vocabulary flashcards with real pronunciation, conjugation tables and home-screen widgets.",
-
         // Footer
         footerNote: "Built with plain HTML, CSS and JavaScript.",
         footerNav: "Site links"
@@ -101,7 +75,6 @@ const translations = {
         conferencesTitle: "Charlas",
         teachingTitle: "Docencia",
         contactTitle: "Contacto",
-        appsTitle: "Apps",
         menuToggleLabel: "Amosar ou agochar o menú",
         themeToggleLabel: "Cambiar entre tema claro e escuro",
 
@@ -156,31 +129,6 @@ const translations = {
         teachingSubject3: "Aprendizaxe Automática con Spark",
         teachingSubject4: "MLOps",
         teachingSubject5: "Spark",
-
-        // Páxina de apps
-        appsHeading: "Apps de Android",
-        appsIntro: "Proxectos persoais que fago e manteño pola miña conta: test, tarxetas de vocabulario e pequenas ferramentas do día a día. A maioría están en galego e todas son de balde.",
-        appsLiveHeading: "Dispoñibles en Google Play",
-        appsLiveNote: "Publicadas e dispoñibles para todo o mundo.",
-        appsTestingHeading: "En proba pechada",
-        appsTestingNote: "Estas apps aínda están en proba pechada en Google Play, así que non aparecen na busca. Ando a procurar probadores — únete ao grupo de probas dunha app e poderás instalala desde Google Play e enviarme comentarios. Calquera axuda é benvida.",
-        badgeLive: "En Google Play",
-        badgeTesting: "Proba pechada",
-        appsPlayCta: "Google Play",
-        appsTesterCta: "Quero ser probador",
-
-        appRedquizName: "Test Vermello",
-        appRedquizDesc: "Un test de xeografía política: bandeiras, persoas e feitos históricos, con desafíos en liña contra outros xogadores.",
-        appGalicianName: "Palabras Galegas",
-        appGalicianDesc: "Aprende vocabulario galego con tarxetas, widgets na pantalla de inicio, recordatorios diarios e pronuncia.",
-        appMultiplicaName: "MultiplicApp",
-        appMultiplicaDesc: "Practica as táboas de multiplicar. Pensada para a rapazada, con seguimento do progreso e retos cronometrados.",
-        appForxarpgName: "Forxa de Lendas",
-        appForxarpgDesc: "Un creador de personaxes paso a paso para xogos de rol de fantasía clásicos — razas, clases, atributos e equipo.",
-        appBatterytempName: "Temp. Batería",
-        appBatterytempDesc: "Consulta a temperatura da batería dunha ollada desde un widget, sen abrir nada.",
-        appRussianName: "Vocabulario Ruso",
-        appRussianDesc: "Tarxetas de vocabulario ruso con pronuncia real, táboas de conxugación e widgets na pantalla de inicio.",
 
         // Rodapé
         footerNote: "Feito con HTML, CSS e JavaScript, sen frameworks.",
